@@ -1,0 +1,473 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-fraunces;
+}
+
+p,
+span {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 1rem;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
+      height: 20px;
+    }
+    .hamburger {
+      height: 20px;
+    }
+    .nav-menu {
+      &.active {
+        display: flex;
+      }
+      background-color: $white;
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      z-index: 10;
+      padding: 2rem 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      li {
+        color: $dark-grayish-blue;
+        font-size: 0.9;
+        cursor: pointer;
+      }
+      :last-child {
+        padding: 1rem 1.5rem;
+        background-color: $yellow;
+        border-radius: 2rem;
+        color: $very-dark-desaturated-blue;
+        font-size: 0.8rem;
+        font-family: $font-fraunces;
+        text-transform: uppercase;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid $white;
+      }
+    }
+  }
+  .hero {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      color: $white;
+      letter-spacing: 0.25rem;
+      line-height: 2.25rem;
+      font-size: 1.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    img {
+      margin: 2.5rem 0 6.5rem;
+    }
+  }
+}
+
+main {
+  .img-bloc,
+  .mix-bloc,
+  .img-zone > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .transform-img {
+    background-image: url("../images/mobile/image-transform.jpg");
+  }
+  .stand-out-img {
+    background-image: url("../images/mobile/image-stand-out.jpg");
+  }
+  .milk {
+    background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  }
+  .orange {
+    background-image: url("../images/mobile/image-gallery-orange.jpg");
+  }
+  .cone {
+    background-image: url("../images/mobile/image-gallery-cone.jpg");
+  }
+  .sugar-cubes {
+    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+  .img-bloc {
+    background-position: center;
+    height: 15rem;
+  }
+  .txt-bloc {
+    background-color: $white;
+    padding: 2.75rem 1rem;
+    text-align: center;
+    h3 {
+      font-size: 1.5rem;
+      font-family: 900;
+    }
+    p {
+      margin: 1.25rem 0;
+      color: $dark-grayish-blue;
+    }
+    h4 {
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 10px;
+        border-radius: 1rem;
+        opacity: 0.5;
+        transform: translate(-5px, 125%);
+        z-index: -1;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    &.transform {
+      h4 {
+        &::before {
+          background-color: $yellow;
+        }
+      }
+    }
+    &.stand-out {
+      h4 {
+        &::before {
+          background-color: $soft-red;
+        }
+      }
+    }
+  }
+  .mix-bloc {
+    background-position: top;
+    padding: 22.5rem 1rem 2.75rem;
+    text-align: center;
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      margin: 1.25rem 0;
+    }
+  }
+  .graphic-design {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    color: $dark-desaturated-cyan;
+  }
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
+    color: $dark-blue;
+  }
+  .client-testimonials {
+    background-color: $white;
+    padding: 2.75rem 1rem;
+    text-align: center;
+    h3 {
+      color: $grayish-blue;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+    }
+    .customer-reviews {
+      padding: 0 0.5rem;
+      margin-top: 2.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.75rem;
+      .bloc {
+        img {
+          width: 60px;
+          border-radius: 50%;
+        }
+        p {
+          margin: 1.25rem 0;
+          color: $very-dark-grayish-blue;
+        }
+        .customer {
+          margin-top: 1rem;
+          h4 {
+            color: $very-dark-desaturated-blue;
+          }
+          span {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: $grayish-blue;
+          }
+        }
+      }
+    }
+  }
+  .img-zone {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+      background-position: center;
+      height: 10rem;
+    }
+  }
+}
+
+footer {
+  padding: 2rem 1rem;
+  background-color: hsl(168, 44%, 64%);
+  color: $dark-moderate-cyan;
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &.footer-menu {
+      margin: 1.5rem 0 3rem;
+      gap: 2rem;
+    }
+    &.icons {
+      gap: 1.5rem;
+      a {
+        color: $dark-desaturated-cyan;
+        i {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    :hover {
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  header {
+    .hero {
+      img {
+        margin: 2.5rem 0 11rem;
+      }
+    }
+  }
+  main {
+    .img-bloc {
+      height: 20rem;
+    }
+    .txt-bloc {
+      padding: 3rem 1rem;
+      p {
+        margin: 2.5rem 0;
+      }
+    }
+    .mix-bloc {
+      padding: 28rem 1rem 2.75rem;
+      p {
+        margin: 1.25rem 0;
+      }
+    }
+    .img-zone {
+      div {
+        height: 12.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .img-bloc {
+      height: 20rem;
+    }
+    .txt-bloc {
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        margin: 1.5rem 0;
+      }
+      &.transform {
+        order: -1;
+      }
+    }
+    .mix-bloc {
+      padding: 22.5rem 1rem 2.5rem;
+      p {
+        margin: 1.25rem 0;
+      }
+    }
+    .client-testimonials {
+      grid-column: 1/3;
+    }
+    .img-zone {
+      grid-column: 1/3;
+      grid-template-columns: repeat(4, 1fr);
+      div {
+        height: 12.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 1.5rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .logo {
+        height: 30px;
+      }
+      .hamburger {
+        display: none;
+      }
+      .nav-menu {
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        position: relative;
+        inset: 0;
+        li {
+          color: $white;
+          font-size: 0.9;
+          cursor: pointer;
+        }
+        :last-child {
+          background-color: $white;
+          color: $very-dark-desaturated-blue;
+          &:hover {
+            color: $white;
+            background-color: rgba($white, 0.5);
+          }
+        }
+        &::before {
+          content: "";
+          border: none;
+        }
+      }
+    }
+    .hero {
+      margin-top: 5rem;
+      img {
+        margin: 2.5rem 0 12rem;
+      }
+    }
+  }
+  main {
+    .transform-img {
+      background-image: url("../images/desktop/image-transform.jpg");
+    }
+    .stand-out-img {
+      background-image: url("../images/desktop/image-stand-out.jpg");
+    }
+    .graphic-design {
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+    }
+    .photography {
+      background-image: url("../images/desktop/image-photography.jpg");
+    }
+    .milk {
+      background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+    }
+    .orange {
+      background-image: url("../images/desktop/image-gallery-orange.jpg");
+    }
+    .cone {
+      background-image: url("../images/desktop/image-gallery-cone.jpg");
+    }
+    .sugar-cubes {
+      background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+    }
+    .client-testimonials {
+      padding: 7rem 1rem;
+      .customer-reviews {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  footer {
+    padding: 3rem 1rem;
+    ul {
+      &.icons {
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    .img-bloc {
+      height: 25rem;
+    }
+    .txt-bloc {
+      p {
+        margin: 3.5rem 0;
+      }
+    }
+    .img-zone {
+      div {
+        height: 17.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-color: hsl(168, 100%, 94%);
+    margin: 0 auto;
+    max-width: 1440px;
+    header {
+      .hero {
+        img {
+          margin: 2.5rem 0 20rem;
+        }
+      }
+    }
+    main {
+      .img-bloc {
+        height: 30rem;
+      }
+      .img-zone {
+        div {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
